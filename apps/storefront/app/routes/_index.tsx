@@ -18,16 +18,16 @@ export const meta: MetaFunction<typeof loader> = getMergedPageMeta;
 export default function IndexRoute() {
   return (
     <>
-      <link rel="preload" href="/assets/images/barrio-banner.png" as="image" />
+      <link rel="preload" href="/assets/images/coffee-banner.png" as="image" />
       <Hero
         className="h-[800px] !max-w-full -mt-[calc(var(--mkt-header-height)+3rem)] md:-mt-[calc(var(--mkt-header-height-desktop)+2rem)] pt-[var(--mkt-header-height)] md:pt-[var(--mkt-header-height-desktop)]"
         content={
           <div className="text-center w-full space-y-9">
             <h4 className="font-italiana text-2xl">COFFEE & COMMUNITY</h4>
-            <h1 className="text-8xl font-aboreto">BARRIO</h1>
+            <h1 className="text-8xl font-aboreto">LAVENDER HILL SPRINGS</h1>
             <p className="max-w-prose mx-auto text-lg">
-              Discover our artisan-roasted coffee, crafted with care and delivered to your door. At Barrio, we’re more
-              than a coffee roastery—we’re&nbsp;a&nbsp;neighborhood.
+              Discover our artisan-roasted coffee, crafted with care and delivered to your door. At Lavender Hill Springs, we're more
+              than a coffee roastery—we're&nbsp;a&nbsp;community.
             </p>
           </div>
         }
@@ -38,8 +38,8 @@ export default function IndexRoute() {
           },
         ]}
         image={{
-          url: '/assets/images/barrio-banner.png',
-          alt: 'Barrio background',
+          url: '/assets/images/coffee-banner.png',
+          alt: 'Lavender Hill Springs Coffee background',
         }}
       />
 
@@ -48,7 +48,7 @@ export default function IndexRoute() {
           <Image
             src="/assets/images/header-image-1.png"
             loading="lazy"
-            alt="Barrio background"
+            alt="Lavender Hill Springs Coffee background"
             height={520}
             width={420}
           />
@@ -72,7 +72,7 @@ export default function IndexRoute() {
           backgroundClassName="rounded-3xl"
           image={{
             url: '/assets/images/banner-coffee-shop.png',
-            alt: 'Barrio background',
+            alt: 'Lavender Hill Springs Coffee background',
           }}
         />
       </Container>
@@ -168,21 +168,21 @@ export default function IndexRoute() {
           },
         ]}
         image={{
-          url: '/assets/images/barrio-banner.png',
+          url: '/assets/images/coffee-banner.png',
           alt: 'Barrio background',
         }}
       />
 
       <Container className="flex flex-col-reverse gap-8 items-center md:items-start p-6 lg:pt-24 xl:pt-16 lg:px-24 relative lg:min-h-[354px] min-h-[276px]">
         <div className="flex justify-center md:justify-end md:absolute md:-top-[30%] w-60 md:w-80 md:right-0 lg:right-20 lg:w-[420px]">
-          <Image src="/assets/images/header-image-2.png" alt="Barrio background" height={520} width={420} />
+          <Image src="/assets/images/header-image-2.png" alt="Lavender Hill Springs Coffee background" height={520} width={420} />
         </div>
 
         <h2 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-italiana md:ml-0 md:mr-[288px] lg:mr-[392px]">
           <span className="whitespace-nowrap">The Art of Roasting</span>
           <br />
           <span className="font-ballet text-[200%] whitespace-nowrap inline-block mt-6 mb-4 sm:mt-2 sm:-mb-4">
-            at Barrio
+            at Lavender Hill Springs
           </span>
           <br />
           <span className="whitespace-nowrap">Crafting with Care</span>
@@ -203,7 +203,7 @@ export default function IndexRoute() {
         }
         right={
           <p className="text-sm h-full flex items-center justify-center">
-            At Barrio, our roasting process is a carefully honed craft, combining traditional techniques with a modern,
+            At Lavender Hill Springs, our roasting process is a carefully honed craft, combining traditional techniques with a modern,
             sustainable approach. Each batch of coffee is roasted in small quantities to ensure precise control over
             every stage of the process, allowing the unique characteristics of the beans to shine through.
             <br />
@@ -217,7 +217,7 @@ export default function IndexRoute() {
             <br />
             Our goal is to honor the origin of each coffee, preserving its natural flavors while adding our own touch of
             expertise. The result? A perfectly roasted coffee that reflects the heart of our community—vibrant, diverse,
-            and full of life. At Barrio, every roast tells a story, and every cup connects you to the hands that
+            and full of life. At Lavender Hill Springs, every roast tells a story, and every cup connects you to the hands that
             nurtured it.
           </p>
         }
@@ -237,7 +237,7 @@ export default function IndexRoute() {
         content={
           <div className="space-y-8 flex flex-col justify-center items-center">
             <h4 className="text-xl font-italiana">FIND YOUR COMMUNITY</h4>
-            <h3 className="text-7xl  font-aboreto">BARRIO</h3>
+            <h3 className="text-7xl  font-aboreto">LAVENDER HILL SPRINGS</h3>
             <p className="text-xl">Ship, Share & Connect Over Coffee</p>
             <ActionList
               actions={[

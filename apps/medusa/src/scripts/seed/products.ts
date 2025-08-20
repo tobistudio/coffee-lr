@@ -82,24 +82,24 @@ export const seedProducts = ({
   shipping_profile_id: string;
 }): CreateProductWorkflowInputDTO[] => [
   {
-    title: 'Barrio Blend - Medium Roast',
+    title: 'Lavender Hill Springs Colombian Coffee - Medium Roast',
     description:
-      'Dive into the rich tapestry of flavors with our Barrio Blend, a masterful medium-dark roast that harmonizes a symphony of taste. Each sip reveals layers of complexity, with a gentle sweetness that dances on the palate, making it an exquisite choice for those who cherish a well-rounded coffee experience.',
-    handle: 'barrio-blend-medium-roast',
+      'Experience the rich, smooth flavors of our Lavender Hill Springs Colombian Coffee, sourced from the high-altitude regions of Colombia. This medium roast offers a perfect balance of sweetness and acidity, with notes of caramel and a hint of citrus that creates a truly exceptional coffee experience.',
+    handle: 'lavender-hill-springs-colombian-coffee',
     status: ProductStatus.PUBLISHED,
-    category_ids: categories.filter(({ name }) => name === 'Blends').map(({ id }) => id),
-    tag_ids: tags.filter((t) => ['Best Seller', 'Latin America', 'Africa'].includes(t.value)).map((t) => t.id),
-    thumbnail: 'https://lambdacurrysites.s3.us-east-1.amazonaws.com/barrio/Barrio-Blend.jpg',
+    category_ids: categories.filter(({ name }) => name === 'Single Origin').map(({ id }) => id),
+    tag_ids: tags.filter((t) => ['Best Seller', 'Colombia'].includes(t.value)).map((t) => t.id),
+    thumbnail: 'https://lambdacurrysites.s3.us-east-1.amazonaws.com/lavender-hill-springs/colombian-coffee.jpg',
     collection_id: collections.find(({ title }) => title === 'Medium Roasts')?.id,
     shipping_profile_id,
     images: [
       {
-        url: 'https://lambdacurrysites.s3.us-east-1.amazonaws.com/barrio/Barrio-Blend.jpg',
+        url: 'https://lambdacurrysites.s3.us-east-1.amazonaws.com/lavender-hill-springs/colombian-coffee.jpg',
       },
     ],
     ...buildBaseProductData({
       sales_channels,
-      sku: 'BARRIO-BLEND',
+      sku: 'LAVENDER-HILL-SPRINGS-COLOMBIAN',
       prices: {
         usd: 18.0,
         cad: 24.0,
@@ -107,74 +107,24 @@ export const seedProducts = ({
     }),
   },
   {
-    title: 'Midnight Dark - Dark Roast',
+    title: 'Lavender Hill Springs Ethiopian Coffee - Light Roast',
     description:
-      'Awaken your senses with the Midnight Dark blend, a bold and luxurious dark roast that captivates with its deep, intense flavors. This coffee is a testament to meticulous roasting, offering a velvety texture and a lingering sweetness that envelops the palate, perfect for those who savor a robust and full-bodied cup.',
-    handle: 'midnight-dark-roast',
-    status: ProductStatus.PUBLISHED,
-    collection_id: collections.find(({ title }) => title === 'Dark Roasts')?.id,
-    category_ids: categories.filter(({ name }) => name === 'Blends').map(({ id }) => id),
-    tag_ids: tags.filter((t) => ['Brazil'].includes(t.value)).map((t) => t.id),
-    thumbnail: 'https://lambdacurrysites.s3.us-east-1.amazonaws.com/barrio/Midnight-Dark-Roast.jpg',
-    shipping_profile_id,
-    images: [
-      {
-        url: 'https://lambdacurrysites.s3.us-east-1.amazonaws.com/barrio/Midnight-Dark-Roast.jpg',
-      },
-    ],
-    ...buildBaseProductData({
-      sales_channels,
-      sku: 'MIDNIGHT-DARK',
-      prices: {
-        usd: 20.0,
-        cad: 27.0,
-      },
-    }),
-  },
-  {
-    title: 'Sunrise Single-Origin - Light Roast',
-    description:
-      'Embrace the dawn with our Sunrise Single-Origin, a light roast that celebrates the unique terroir of its beans. This coffee is a vibrant expression of bright, floral notes and a subtle sweetness, offering a refreshing and invigorating experience that is ideal for starting your day or enjoying a serene afternoon.',
-    handle: 'sunrise-single-origin-light-roast',
+      'Discover the bright, floral notes of our Lavender Hill Springs Ethiopian Coffee, a light roast that showcases the unique terroir of Ethiopian beans. With its distinctive berry-like acidity and tea-like body, this coffee offers a refreshing and complex flavor profile that coffee enthusiasts will love.',
+    handle: 'lavender-hill-springs-ethiopian-coffee',
     status: ProductStatus.PUBLISHED,
     collection_id: collections.find(({ title }) => title === 'Light Roasts')?.id,
     category_ids: categories.filter(({ name }) => name === 'Single Origin').map(({ id }) => id),
     tag_ids: tags.filter((t) => ['Best Seller', 'Ethiopia'].includes(t.value)).map((t) => t.id),
-    thumbnail: 'https://lambdacurrysites.s3.us-east-1.amazonaws.com/barrio/Sunrise-Single.jpg',
+    thumbnail: 'https://lambdacurrysites.s3.us-east-1.amazonaws.com/lavender-hill-springs/ethiopian-coffee.jpg',
     shipping_profile_id,
     images: [
       {
-        url: 'https://lambdacurrysites.s3.us-east-1.amazonaws.com/barrio/Sunrise-Single.jpg',
+        url: 'https://lambdacurrysites.s3.us-east-1.amazonaws.com/lavender-hill-springs/ethiopian-coffee.jpg',
       },
     ],
     ...buildBaseProductData({
       sales_channels,
-      sku: 'SUNRISE-SINGLE',
-      prices: {
-        usd: 22.0,
-        cad: 29.0,
-      },
-    }),
-  },
-  {
-    title: 'Barrio Decaf - Medium Roast',
-    description:
-      'Uncover the smooth elegance of our Barrio Decaf, a medium roast crafted for those who desire the rich essence of coffee without the caffeine. This blend is a delicate balance of flavors, with a hint of sweetness that provides a satisfying and delightful experience, any time of the day or night.',
-    handle: 'barrio-decaf-medium-roast',
-    collection_id: collections.find(({ title }) => title === 'Medium Roasts')?.id,
-    category_ids: categories.filter(({ name }) => name === 'Blends').map(({ id }) => id),
-    status: ProductStatus.PUBLISHED,
-    tag_ids: tags.filter((t) => ['Colombia'].includes(t.value)).map((t) => t.id),
-    thumbnail: 'https://lambdacurrysites.s3.us-east-1.amazonaws.com/barrio/Barrio-Decaf.jpg',
-    shipping_profile_id,
-    images: [
-      {
-        url: 'https://lambdacurrysites.s3.us-east-1.amazonaws.com/barrio/Barrio-Decaf.jpg',
-      },
-    ],
-    ...buildBaseProductData({
-      sales_channels,
-      sku: 'BARRIO-DECAF',
+      sku: 'LAVENDER-HILL-SPRINGS-ETHIOPIAN',
       prices: {
         usd: 20.0,
         cad: 27.0,
@@ -182,105 +132,152 @@ export const seedProducts = ({
     }),
   },
   {
-    title: 'Coconut Mocha Delight - Medium Roast',
+    title: 'Lavender Hill Springs Mexican Coffee - Medium Roast',
     description:
-      'Escape to a tropical paradise with our Coconut Mocha Delight, a medium roast that marries the rich, robust flavors of coffee with the exotic allure of coconut and a whisper of chocolate. This enchanting blend is a journey of taste, perfect for those seeking a unique and indulgent coffee experience.',
-    handle: 'coconut-mocha-delight-medium-roast',
-    collection_id: collections.find(({ title }) => title === 'Medium Roasts')?.id,
-    category_ids: categories.filter(({ name }) => name === 'Blends').map(({ id }) => id),
+      'Savor the rich, full-bodied flavors of our Lavender Hill Springs Mexican Coffee, sourced from the highlands of Mexico. This medium roast features a smooth, nutty profile with subtle chocolate notes and a gentle acidity that makes it perfect for any time of day.',
+    handle: 'lavender-hill-springs-mexican-coffee',
     status: ProductStatus.PUBLISHED,
-    tag_ids: tags.filter((t) => ['Colombia'].includes(t.value)).map((t) => t.id),
-    thumbnail: 'https://lambdacurrysites.s3.us-east-1.amazonaws.com/barrio/Coconut-Mocha.jpg',
+    collection_id: collections.find(({ title }) => title === 'Medium Roasts')?.id,
+    category_ids: categories.filter(({ name }) => name === 'Single Origin').map(({ id }) => id),
+    tag_ids: tags.filter((t) => ['Mexico'].includes(t.value)).map((t) => t.id),
+    thumbnail: 'https://lambdacurrysites.s3.us-east-1.amazonaws.com/lavender-hill-springs/mexican-coffee.jpg',
     shipping_profile_id,
     images: [
       {
-        url: 'https://lambdacurrysites.s3.us-east-1.amazonaws.com/barrio/Coconut-Mocha.jpg',
+        url: 'https://lambdacurrysites.s3.us-east-1.amazonaws.com/lavender-hill-springs/mexican-coffee.jpg',
       },
     ],
     ...buildBaseProductData({
       sales_channels,
-      sku: 'COCONUT-MOCHA',
+      sku: 'LAVENDER-HILL-SPRINGS-MEXICAN',
+      prices: {
+        usd: 19.0,
+        cad: 25.0,
+      },
+    }),
+  },
+  {
+    title: 'Lavender Hill Springs Guatemalan Coffee - Medium Roast',
+    description:
+      'Experience the complex flavors of our Lavender Hill Springs Guatemalan Coffee, sourced from the volcanic highlands of Guatemala. This medium roast offers a rich, chocolatey profile with notes of spice and a smooth, velvety finish that coffee connoisseurs will appreciate.',
+    handle: 'lavender-hill-springs-guatemalan-coffee',
+    status: ProductStatus.PUBLISHED,
+    collection_id: collections.find(({ title }) => title === 'Medium Roasts')?.id,
+    category_ids: categories.filter(({ name }) => name === 'Single Origin').map(({ id }) => id),
+    tag_ids: tags.filter((t) => ['Guatemala'].includes(t.value)).map((t) => t.id),
+    thumbnail: 'https://lambdacurrysites.s3.us-east-1.amazonaws.com/lavender-hill-springs/guatemalan-coffee.jpg',
+    shipping_profile_id,
+    images: [
+      {
+        url: 'https://lambdacurrysites.s3.us-east-1.amazonaws.com/lavender-hill-springs/guatemalan-coffee.jpg',
+      },
+    ],
+    ...buildBaseProductData({
+      sales_channels,
+      sku: 'LAVENDER-HILL-SPRINGS-GUATEMALAN',
+      prices: {
+        usd: 21.0,
+        cad: 28.0,
+      },
+    }),
+  },
+  {
+    title: 'Lavender Hill Springs Birthday Cake Coffee - Medium Roast',
+    description:
+      'Celebrate every day with our Lavender Hill Springs Birthday Cake Coffee, a delightful medium roast infused with the sweet, nostalgic flavors of birthday cake. This unique blend combines the rich taste of coffee with hints of vanilla, buttercream, and a touch of celebration that makes every cup feel special.',
+    handle: 'lavender-hill-springs-birthday-cake-coffee',
+    collection_id: collections.find(({ title }) => title === 'Medium Roasts')?.id,
+    category_ids: categories.filter(({ name }) => name === 'Blends').map(({ id }) => id),
+    status: ProductStatus.PUBLISHED,
+    tag_ids: tags.filter((t) => ['Best Seller'].includes(t.value)).map((t) => t.id),
+    thumbnail: 'https://lambdacurrysites.s3.us-east-1.amazonaws.com/lavender-hill-springs/birthday-cake-coffee.jpg',
+    shipping_profile_id,
+    images: [
+      {
+        url: 'https://lambdacurrysites.s3.us-east-1.amazonaws.com/lavender-hill-springs/birthday-cake-coffee.jpg',
+      },
+    ],
+    ...buildBaseProductData({
+      sales_channels,
+      sku: 'LAVENDER-HILL-SPRINGS-BIRTHDAY-CAKE',
       prices: {
         usd: 22.0,
         cad: 29.0,
       },
     }),
   },
-
   {
-    title: 'Chili Choco Spice - Dark Roast',
+    title: 'Lavender Hill Springs Gingerbread Coffee - Medium Roast',
     description:
-      'Embark on a daring flavor journey with our Chili Choco Spice, a dark roast that boldly combines the fiery warmth of chili with the decadent richness of chocolate. This adventurous blend is a thrilling experience for the palate, offering a spicy-sweet symphony that is both exciting and deeply satisfying.',
-    handle: 'chili-choco-spice-dark-roast',
-    collection_id: collections.find(({ title }) => title === 'Dark Roasts')?.id,
+      'Embrace the holiday spirit year-round with our Lavender Hill Springs Gingerbread Coffee, a warm and comforting medium roast that captures the essence of freshly baked gingerbread. This aromatic blend features notes of ginger, cinnamon, molasses, and a hint of nutmeg that creates a cozy, festive experience.',
+    handle: 'lavender-hill-springs-gingerbread-coffee',
+    collection_id: collections.find(({ title }) => title === 'Medium Roasts')?.id,
     category_ids: categories.filter(({ name }) => name === 'Blends').map(({ id }) => id),
     status: ProductStatus.PUBLISHED,
-    tag_ids: tags.filter((t) => ['Guatemala'].includes(t.value)).map((t) => t.id),
-    thumbnail: 'https://lambdacurrysites.s3.us-east-1.amazonaws.com/barrio/Chili-Choco.jpg',
+    tag_ids: tags.filter((t) => ['Best Seller'].includes(t.value)).map((t) => t.id),
+    thumbnail: 'https://lambdacurrysites.s3.us-east-1.amazonaws.com/lavender-hill-springs/gingerbread-coffee.jpg',
     shipping_profile_id,
     images: [
       {
-        url: 'https://lambdacurrysites.s3.us-east-1.amazonaws.com/barrio/Chili-Choco.jpg',
+        url: 'https://lambdacurrysites.s3.us-east-1.amazonaws.com/lavender-hill-springs/gingerbread-coffee.jpg',
       },
     ],
     ...buildBaseProductData({
       sales_channels,
-      sku: 'CHILI-CHOCO',
+      sku: 'LAVENDER-HILL-SPRINGS-GINGERBREAD',
+      prices: {
+        usd: 23.0,
+        cad: 30.0,
+      },
+    }),
+  },
+  {
+    title: 'Lavender Hill Springs Yogi Blend - Light Roast',
+    description:
+      'Find your zen with our Lavender Hill Springs Yogi Blend, a light roast crafted for mindful moments and peaceful contemplation. This harmonious blend combines smooth, gentle flavors with a subtle sweetness that promotes relaxation and inner calm, perfect for meditation or quiet reflection.',
+    handle: 'lavender-hill-springs-yogi-blend',
+    collection_id: collections.find(({ title }) => title === 'Light Roasts')?.id,
+    category_ids: categories.filter(({ name }) => name === 'Blends').map(({ id }) => id),
+    status: ProductStatus.PUBLISHED,
+    tag_ids: tags.filter((t) => ['Best Seller'].includes(t.value)).map((t) => t.id),
+    thumbnail: 'https://lambdacurrysites.s3.us-east-1.amazonaws.com/lavender-hill-springs/yogi-blend.jpg',
+    shipping_profile_id,
+    images: [
+      {
+        url: 'https://lambdacurrysites.s3.us-east-1.amazonaws.com/lavender-hill-springs/yogi-blend.jpg',
+      },
+    ],
+    ...buildBaseProductData({
+      sales_channels,
+      sku: 'LAVENDER-HILL-SPRINGS-YOGI-BLEND',
       prices: {
         usd: 24.0,
         cad: 31.0,
       },
     }),
   },
-
   {
-    title: 'Cardamom Spiced Roast - Dark Roast',
+    title: 'Lavender Hill Springs Silver Bullet Coffee - Dark Roast',
     description:
-      'Transport yourself to distant lands with our Cardamom Spiced Roast, a dark blend infused with the exotic and aromatic essence of cardamom. This luxurious coffee offers a rich and captivating taste experience, enveloping you in a world of flavor that is both intriguing and comforting.',
-    handle: 'cardamom-spiced-roast-dark-blend',
+      'Unleash the power of our Lavender Hill Springs Silver Bullet Coffee, a bold dark roast designed for those who demand intensity and strength. This robust blend delivers a powerful punch of rich, deep flavors with a smooth finish that will energize your day and keep you focused.',
+    handle: 'lavender-hill-springs-silver-bullet-coffee',
     collection_id: collections.find(({ title }) => title === 'Dark Roasts')?.id,
     category_ids: categories.filter(({ name }) => name === 'Blends').map(({ id }) => id),
     status: ProductStatus.PUBLISHED,
-    tag_ids: tags.filter((t) => ['Yemen'].includes(t.value)).map((t) => t.id),
-    thumbnail: 'https://lambdacurrysites.s3.us-east-1.amazonaws.com/barrio/Cardamom-Spice.jpg',
+    tag_ids: tags.filter((t) => ['Best Seller'].includes(t.value)).map((t) => t.id),
+    thumbnail: 'https://lambdacurrysites.s3.us-east-1.amazonaws.com/lavender-hill-springs/silver-bullet-coffee.jpg',
     shipping_profile_id,
     images: [
       {
-        url: 'https://lambdacurrysites.s3.us-east-1.amazonaws.com/barrio/Cardamom-Spice.jpg',
+        url: 'https://lambdacurrysites.s3.us-east-1.amazonaws.com/lavender-hill-springs/silver-bullet-coffee.jpg',
       },
     ],
     ...buildBaseProductData({
       sales_channels,
-      sku: 'CARDAMOM-SPICE',
+      sku: 'LAVENDER-HILL-SPRINGS-SILVER-BULLET',
       prices: {
         usd: 25.0,
         cad: 32.0,
-      },
-    }),
-  },
-
-  {
-    title: 'Twilight Peak - Dark Roast',
-    description:
-      'Discover the majestic flavors of our Twilight Peak, a dark roast sourced from the pristine highlands of Peru. This coffee is a celebration of bold, smooth flavors with a refined finish, offering a rich and satisfying experience that is perfect for those who appreciate a well-crafted cup.',
-    handle: 'twilight-peak-dark-roast',
-    collection_id: collections.find(({ title }) => title === 'Dark Roasts')?.id,
-    category_ids: categories.filter(({ name }) => name === 'Blends').map(({ id }) => id),
-    status: ProductStatus.PUBLISHED,
-    tag_ids: tags.filter((t) => ['Peru'].includes(t.value)).map((t) => t.id),
-    thumbnail: 'https://lambdacurrysites.s3.us-east-1.amazonaws.com/barrio/Twilight-Peak.jpg',
-    shipping_profile_id,
-    images: [
-      {
-        url: 'https://lambdacurrysites.s3.us-east-1.amazonaws.com/barrio/Twilight-Peak.jpg',
-      },
-    ],
-    ...buildBaseProductData({
-      sales_channels,
-      sku: 'TWILIGHT-PEAK',
-      prices: {
-        usd: 26.0,
-        cad: 33.0,
       },
     }),
   },

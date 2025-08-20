@@ -15,10 +15,13 @@ export function formatPrice(amount: number | null, options: FormatPriceOptions) 
   };
   const { currency, quantity } = merge({}, defaultOptions, options);
 
+  // Convert cents to dollars by dividing by 100
+  const amountInDollars = (amount || 0) / 100;
+
   return new Intl.NumberFormat(locale, {
     style: 'currency',
     currency,
-  }).format((amount || 0) * quantity);
+  }).format(amountInDollars * quantity);
 }
 
 export function sortProductVariantsByPrice(product: StoreProduct) {

@@ -46,9 +46,9 @@ export const Footer = () => {
             <div className="flex flex-col gap-5">
               <h4 className="font-bold">Coffee & Community</h4>
               <p className="text-sm">
-                Barrio Coffee is a specialty coffee roaster and cafe located in East Austin. We offer freshly roasted
-                beans with an experienced balance of quality flavors. Come enjoy our custom house-blends and our
-                assortment of single origin coffees.
+                Lavender Hill Springs Coffee is a specialty coffee roaster located in Lawrenceburg, Tennessee. We offer freshly roasted
+                beans with an experienced balance of quality flavors. Enjoy our custom house-blends and our
+                assortment of single origin coffees, delivered to your door.
               </p>
             </div>
             <LogoStoreName />
@@ -78,11 +78,12 @@ export const Footer = () => {
             <SocialIcons siteSettings={settings} />
 
             <div className="flex flex-col gap-4 mt-4">
-              <h5>Location</h5>
+              <h5>Contact</h5>
               <p className="text-sm">
-                1619 E Cesar Chavez St, Austin, TX 78702
-                <br />
-                Open 7AM - 4PM Daily
+                280 Red Hill Center Rd<br />
+                Lawrenceburg, TN 38464<br />
+                Phone: (615) 669-3398<br />
+                Email: info@lavenderhillsprings.com
               </p>
             </div>
           </div>

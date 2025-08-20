@@ -19,7 +19,7 @@ import '@app/styles/global.css';
 import { useRootLoaderData } from './hooks/useRootLoaderData';
 
 export const getRootMeta: MetaFunction = ({ data }) => {
-  const title = 'Barrio Store';
+  const title = 'Lavender Hill Springs Coffee';
   const description = 'Discover our artisan-roasted coffee, crafted with care and delivered to your door.';
   const ogTitle = title;
   const ogDescription = description;

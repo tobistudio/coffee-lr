@@ -11,13 +11,13 @@ export const ProductReviewSection: FC = () => {
 
   const { product, productReviews, productReviewStats } = data;
 
-  if (!productReviews.count || productReviewStats.count < 1) return null;
+  if (!productReviews.count || productReviewStats?.count < 1) return null;
 
   return (
     <section id="reviews" className="container mx-auto my-12 grid grid-cols-12 px-8">
       <ProductReviewSummary
         className="col-span-12 lg:col-span-4"
-        stats={productReviewStats?.product_review_stats[0]}
+        stats={productReviewStats?.product_review_stats?.[0] || null}
         count={productReviews.count}
       />
 

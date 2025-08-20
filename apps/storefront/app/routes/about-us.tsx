@@ -5,25 +5,11 @@ import type { LoaderFunctionArgs, MetaFunction } from 'react-router';
 
 const locations: LocationProps[] = [
   {
-    title: 'Barrio South Lamar',
-    addressLines: ['1105 S. Lamar Blvd', 'Austin, TX 78704'],
-    phone: '(512) 906-0010',
-    hours: ['Open Daily — 7am to 7pm'],
+    title: 'Lavender Hill Springs Coffee Roastery',
+    addressLines: ['280 Red Hill Center Rd', 'Lawrenceburg, TN 38464'],
+    phone: '(615) 669-3398',
+    hours: ['Online Orders — Available 24/7', 'Customer Service — Mon-Fri 9am-5pm'],
     imageUrl: '/assets/images/location-1.png',
-  },
-  {
-    title: 'Barrio Sonterra',
-    addressLines: ['700 E. Sonterra Blvd. Suite #1113', 'San Antonio, TX 78258'],
-    phone: '(210) 530-8740',
-    hours: ['Mon thru Fri — 6am to 7pm', 'Sat — 7am to 7pm', 'Sun — 7am to 6pm'],
-    imageUrl: '/assets/images/location-2.png',
-  },
-  {
-    title: 'Barrio Deep Ellum',
-    addressLines: ['2369 Main Street', 'Dallas, TX 75226'],
-    phone: '(469) 248-3440',
-    hours: ['Sun thru Thu — 7am to 7pm', 'Fri thru Sat — 7am to 8pm'],
-    imageUrl: '/assets/images/location-3.png',
   },
 ];
 
@@ -85,9 +71,9 @@ export default function IndexRoute() {
                 Our Story
               </h1>
               <p className="mx-auto text-md md:text-2xl !leading-normal">
-                At Barrio Coffee Roastery, we’re more than just a coffee business—we’re a community. Inspired by the
-                essence of a "barrio," a close-knit neighborhood where people gather, share, and connect, we aim to
-                bring that sense of belonging and warmth to every cup of coffee we roast. From the moment we started,
+                At Lavender Hill Springs Coffee, we're more than just a coffee business—we're a community. Inspired by the
+                natural beauty of Tennessee's rolling hills and the warmth of southern hospitality, we aim to
+                bring that sense of belonging and comfort to every cup of coffee we roast. From the moment we started,
                 our passion has been to create exceptional coffee that{' '}
                 <span className="font-bold">brings people together, one sip at a time.</span>
               </p>
@@ -100,7 +86,7 @@ export default function IndexRoute() {
               url: '/products',
             },
             {
-              label: 'Join the Barrio Community',
+              label: 'Join the Lavender Hill Springs Community',
               url: '#',
             },
           ]}
@@ -109,7 +95,7 @@ export default function IndexRoute() {
 
       <Container className="pt-4 flex flex-col gap-16 py-0 sm:!px-16 pb-44">
         <div className="font-italiana text-4xl break-words md:text-6xl lg:text-7xl">
-          Find your people, find your <span className="font-ballet text-[150%] leading-tight">Barrio</span>
+          Find your people, find your <span className="font-ballet text-[150%] leading-tight">Lavender Hill Springs</span>
         </div>
         {locations.map((location) => (
           <Location {...location} />

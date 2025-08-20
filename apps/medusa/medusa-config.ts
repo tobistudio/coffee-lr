@@ -54,8 +54,11 @@ module.exports = defineConfig({
   },
   plugins: [
     {
-      resolve: '@lambdacurry/medusa-product-reviews',
-      options: {},
+      resolve: "medusa-source-shopify",
+      options: {
+        domain: process.env.SHOPIFY_DOMAIN,
+        password: process.env.SHOPIFY_PASSWORD,
+      },
     },
   ],
   modules: [

@@ -51,12 +51,15 @@ export const meta: MetaFunction<ProductPageLoaderData> = getMergedProductMeta;
 export default function ProductDetailRoute() {
   const { product, productReviews, productReviewStats } = useLoaderData<ProductPageLoaderData>();
 
+  // Safely access review stats with fallback
+  const reviewStats = productReviewStats?.product_review_stats?.[0] || null;
+
   return (
     <>
       <ProductTemplate
         product={product}
-        reviewsCount={productReviews.count}
-        reviewStats={productReviewStats.product_review_stats[0]}
+        reviewsCount={productReviews?.count || 0}
+        reviewStats={reviewStats}
       />
       <ProductList className="!pb-[100px] xl:px-9" heading="You may also like" />
       <ProductReviewSection />

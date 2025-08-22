@@ -26,7 +26,7 @@ export const action = async ({ request }: ActionFunctionArgs) => {
 
 export const meta: MetaFunction<typeof loader> = getMergedPageMeta;
 
-export default function IndexRoute() {
+export default function ComingSoonRoute() {
   const actionData = useActionData<typeof action>();
   const [formSubmitted, setFormSubmitted] = useState(false);
 

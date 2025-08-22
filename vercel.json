@@ -1,0 +1,20 @@
+{
+  "buildCommand": "yarn install && cd apps/storefront && yarn build",
+  "installCommand": "yarn install",
+  "framework": null,
+  "functions": {
+    "apps/storefront/build/server/index.js": {
+      "runtime": "nodejs20.x"
+    }
+  },
+  "routes": [
+    {
+      "src": "/build/(.*)",
+      "dest": "/apps/storefront/build/client/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/apps/storefront/build/server/index.js"
+    }
+  ]
+}

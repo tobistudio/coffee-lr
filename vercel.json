@@ -1,20 +1,12 @@
 {
+  "version": 2,
   "buildCommand": "yarn install && cd apps/storefront && yarn build",
-  "installCommand": "yarn install",
+  "outputDirectory": "apps/storefront/build/client",
   "framework": null,
-  "functions": {
-    "apps/storefront/build/server/index.js": {
-      "runtime": "nodejs20.x"
-    }
-  },
-  "routes": [
+  "rewrites": [
     {
-      "src": "/build/(.*)",
-      "dest": "/apps/storefront/build/client/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/apps/storefront/build/server/index.js"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }

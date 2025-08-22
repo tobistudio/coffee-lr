@@ -14,6 +14,14 @@ export default defineConfig({
   ssr: {
     noExternal: ['@medusajs/js-sdk', '@lambdacurry/medusa-plugins-sdk'],
   },
-  plugins: [reactRouter(), tsconfigPaths({ root: './' }), vanillaExtractPlugin()],
-  build: {},
+  plugins: [
+    reactRouter({
+      ssr: false,  // Disable SSR for simpler Vercel deployment
+    }), 
+    tsconfigPaths({ root: './' }), 
+    vanillaExtractPlugin()
+  ],
+  build: {
+    outDir: 'build',
+  },
 });

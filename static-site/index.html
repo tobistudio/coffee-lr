@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lavender Hill Springs Coffee - Coming Soon</title>
+    <meta name="description" content="We're crafting something special for coffee lovers everywhere. Our artisan-roasted coffee will be available soon, bringing community and exceptional flavor to your door.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="hero-section">
+        <div class="hero-background">
+            <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2061&q=80" alt="Coffee beans background" class="background-image">
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="content-wrapper">
+                <h4 class="subtitle">COMING SOON</h4>
+                <h1 class="main-title">LAVENDER HILL SPRINGS</h1>
+                <p class="description">
+                    We're crafting something special for coffee lovers everywhere. 
+                    Our artisan-roasted coffee will be available soon, bringing community and exceptional flavor to your door.
+                </p>
+                
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h3 class="form-title">Get Notified When We Launch</h3>
+                    
+                    <div id="success-message" class="success-message hidden">
+                        Thank you for your interest! We'll be in touch soon.
+                    </div>
+                    
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <input
+                                type="text"
+                                name="name"
+                                placeholder="Your Name"
+                                required
+                                class="form-input"
+                            />
+                        </div>
+                        <div class="form-group">
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="Your Email"
+                                required
+                                class="form-input"
+                            />
+                        </div>
+                        <div class="form-group">
+                            <textarea
+                                name="message"
+                                placeholder="Tell us about your coffee preferences (optional)"
+                                rows="4"
+                                class="form-input form-textarea"
+                            ></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">
+                            Notify Me
+                        </button>
+                    </form>
+                </div>
+
+                <div class="tagline">
+                    Follow our journey • Artisan Coffee • Community Focused
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

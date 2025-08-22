@@ -6,7 +6,7 @@
   },
   "deploy": {
     "numReplicas": 1,
-    "startCommand": "./start-railway.sh",
+    "startCommand": "yarn railway:start",
     "healthcheckPath": "/store/health",
     "healthcheckTimeout": 100,
     "restartPolicyType": "ON_FAILURE",

@@ -137,8 +137,3 @@ To enable Express Checkout in the Medusa Storefront, follow these steps:
 
 ## Contributors
 Made with ❤️ by the Lambda Curry team.
-
-
-<a href = "https://github.com/lambda-curry/medusa2-starter/graphs/contributors">
-  <img src = "https://contrib.rocks/image?repo=lambda-curry/medusa2-starter"/>
-</a>

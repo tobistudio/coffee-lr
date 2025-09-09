@@ -134,6 +134,3 @@ To enable Express Checkout in the Medusa Storefront, follow these steps:
 - [Turborepo Documentation](https://turbo.build/repo/docs)
  - [Stripe Express Checkout](https://docs.stripe.com/elements/express-checkout-element)
 
-
-## Contributors
-Made with ❤️ by the Lambda Curry team.
